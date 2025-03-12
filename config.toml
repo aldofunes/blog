@@ -70,7 +70,7 @@ author = "Aldo Funes"
 #       {name = "authors"}, # Basic definition: no feed or pagination
 #     ]
 #
-taxonomies = [{ name = "tags" }]
+taxonomies = [{ name = "tags" }, { name = "categories" }]
 
 # When set to "true", a search index is built from the pages and section
 # content for `default_language`.
@@ -214,13 +214,13 @@ index_format = "elasticlunr_json"
 [languages.es]
 title = "Aldo Funes"
 generate_feeds = true
-taxonomies = [{ name = "tags" }]
+taxonomies = [{ name = "tags" }, { name = "categories" }]
 build_search_index = true
 
 #[languages.pt-PT]
 #title = "Aldo Funes"
 #generate_feeds = true
-#taxonomies = [{ name = "tags" }]
+#taxonomies = [{ name = "tags" }, { name = "categories" }]
 #build_search_index = true
 
 [extra]

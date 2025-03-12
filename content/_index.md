@@ -3,7 +3,7 @@ title = "Home"
 # Note we're not setting `paginate_by` here.
 
 [extra]
-header = { title = "Welcome to my blog!", img = "img/profile.jpg", img_alt = "Aldo Funes, the blog's author" }
+header = { title = "Hello! I'm Aldo", img = "img/profile.jpg", img_alt = "Aldo Funes, the blog's author" }
 
 section_path = "blog/_index.md"  # Where to find your posts.
 max_posts = 5  # Show 5 posts on the home page.

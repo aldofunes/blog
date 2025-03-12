@@ -6,6 +6,7 @@ updated = 2025-03-12
 
 [taxonomies]
 tags = ["Self-Hosting", "CI/CD", "Linux", "Caddy", "Zola"]
+categories = ["Tutorials"]
 
 [extra]
 social_media_card = "img/social_cards/blog_self_hosting_a_blog_in_2025.jpg"
@@ -106,7 +107,7 @@ Zola uses Markdown for content creation, and its directory structure is intuitiv
 
 To serve the site with Caddy, place the generated files in `/www/blog` and configure Caddy with the following `Caddyfile`:
 
-```Caddyfile
+```
 aldofunes.com, www.aldofunes.com {
     tls {
         dns cloudflare __CLOUDFLARE_TOKEN__

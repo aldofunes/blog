@@ -118,7 +118,7 @@ docker compose up --detach
 
 We will use Caddy to handle HTTPS and reverse proxy requests for Gitea. Add the following to your `Caddyfile`:
 
-```plaintext
+```
 gitea.example.com {
     tls {
         dns cloudflare __CLOUDFLARE_TOKEN__

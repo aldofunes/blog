@@ -193,7 +193,7 @@ We can manage the parameters for each stack instance in separate files.
 
 For example:
 
-```text
+```
 ├── src/
 │   ├── cluster.tf
 │   ├── host_servers.tf

@@ -1,6 +1,6 @@
 +++
-title = "Expedition to Peru"
-description = "A mountaineering expedition to the Cordillera Blanca in Peru."
+title = "Expedición a Perú"
+description = "Crónica de una expedición a Perú."
 date = 2018-07-05
 updated = 2025-03-12
 
