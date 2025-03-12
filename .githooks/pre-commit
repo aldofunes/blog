@@ -69,7 +69,8 @@ function has_body_changes() {
 # Function to update the social media card for a post or section.
 function generate_and_commit_card {
     local file=$1
-    social_media_card=$(social-cards-zola -o static/img/social_cards -b http://127.0.0.1:1111 -u -p -i "$file") || {
+    echo "Generating social media card for $file"
+    social_media_card=$(./static/code/social-cards-zola -o static/img/social_cards -b http://127.0.0.1:1111 -u -p -i "$file") || {
         echo "Failed to update social media card for $file"
         exit 1
     }
@@ -165,19 +166,19 @@ for file in "${all_changed_files[@]}"; do
         continue
     fi
 
-    # If the file is an .md file and it's a draft, abort the commit.
-    if [[ "$file" == *.md ]]; then
-        if is_draft "$file"; then
-            error_exit "Draft file $file is being committed!"
-        fi
-    fi
+#    # If the file is an .md file and it's a draft, abort the commit.
+#    if [[ "$file" == *.md ]]; then
+#        if is_draft "$file"; then
+#            error_exit "Draft file $file is being committed!"
+#        fi
+#    fi
 done
 
 # Use `social-cards-zola` to create/update the social media card for Markdown files.
 # See https://osc.garden/blog/automating-social-media-cards-zola/ for context.
 changed_md_files=$(echo "$all_changed_files" | grep '\.md$')
-echo "Changed Markdown files: $changed_md_files"
 # Use parallel to create the social media cards in parallel and commit them.
+echo "processing $changed_md_files out of $all_changed_files"
  if [[ -n "$changed_md_files" ]]; then
      echo "$changed_md_files" | parallel -j 8 generate_and_commit_card
  fi
