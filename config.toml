@@ -1,5 +1,6 @@
 # The base URL of the site; the only required configuration variable.
 base_url = "https://www.aldofunes.com"
+# base_url = "http://localhost:8000"
 
 # The site title and description; used in feeds by default.
 title = "Aldo Funes"
@@ -497,7 +498,7 @@ service = "plausible"
 # For Umami, this is the website ID.
 # For Plausible, this is the domain name (e.g. "example.com").
 # Note: Leave this field empty if you're self-hosting GoatCounter.
-id = "funes.me"
+id = "aldofunes.com"
 
 # Optional: Specify the URL for self-hosted analytics instances.
 # For GoatCounter: Base URL like "https://stats.example.com"
